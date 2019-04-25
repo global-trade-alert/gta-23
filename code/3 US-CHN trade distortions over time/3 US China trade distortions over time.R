@@ -216,7 +216,8 @@ figure2.1.xlsx=figure2.1.xlsx[order(figure2.1.xlsx$implementer),]
 names(figure2.1.xlsx)=c("Implementer","Affected country", "Period","Targeted tariffs or trade defence", "Targeted non-tariff/trade defence",
                         "Untargeted tariffs or trade defence", "Untargeted non-tariff/trade defence","All US policies harming Chinese exports")
 
-write.xlsx(figure2.1.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".1 - Data for Figure ",chapter.number,".1.xlsx", sep=""), row.names=F)
+## commented out for replication
+# write.xlsx(figure2.1.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".1 - Data for Figure ",chapter.number,".1.xlsx", sep=""), row.names=F)
 
 
 # plot here
@@ -253,9 +254,10 @@ plot2.1
 #   guides(fill=guide_legend(title=NULL, ncol=2))+
 #   gta_theme()
 
-gta_plot_saver(plot=plot2.1,
-               path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
-               name=paste("Figure ",chapter.number,".1", sep=""))
+## commented out for replication
+# gta_plot_saver(plot=plot2.1,
+#                path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
+#                name=paste("Figure ",chapter.number,".1", sep=""))
 
 
 
@@ -268,7 +270,8 @@ figure2.2.xlsx=figure2.2.xlsx[order(figure2.2.xlsx$implementer),]
 names(figure2.2.xlsx)=c("Implementer","Affected country", "Period","Targeted tariffs or trade defence", "Targeted non-tariff/trade defence",
                         "Untargeted tariffs or trade defence", "Untargeted non-tariff/trade defence","All Chinese policies harming US exports")
 
-write.xlsx(figure2.2.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".2 - Data for Figure ",chapter.number,".2.xlsx", sep=""), row.names=F)
+## commented out for replication
+# write.xlsx(figure2.2.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".2 - Data for Figure ",chapter.number,".2.xlsx", sep=""), row.names=F)
 
 # plot here
 
@@ -304,9 +307,10 @@ plot2.2
 #   guides(fill=guide_legend(title=NULL, ncol=2))+
 #   gta_theme()
 
-gta_plot_saver(plot=plot2.2,
-               path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
-               name=paste("Figure ",chapter.number,".2", sep=""))
+## commented out for replication
+# gta_plot_saver(plot=plot2.2,
+#                path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
+#                name=paste("Figure ",chapter.number,".2", sep=""))
 
 
 # F3: Bar chart with total amount of Chinese exports to the USA affected by US harmful policy interventions of any type in force at end of Obama administration (19 Jan 2017), at end of 31 December 2017, and on 31 October 2018.
@@ -366,8 +370,8 @@ figure2.3.xlsx$USTR.shares <- (figure2.3.xlsx$trade.value/1000000000)/figure2.3.
 names(figure2.3.xlsx)=c("US administration","Cut-off date","Number of harmful interventions imposed affecting China",
                         "Value of 2016 imports on affected tariff lines", "Share of 2016 US imports from China on affected tariff lines","US Imports from China","Share of total Chinese exports to the USA","USTR trade values","USTR related share of total imports")
 
-
-write.xlsx(figure2.3.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".3 - Data for Figure ",chapter.number,".3.xlsx", sep=""), row.names=F)
+## commented out for replication
+# write.xlsx(figure2.3.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".3 - Data for Figure ",chapter.number,".3.xlsx", sep=""), row.names=F)
 
 # plot here
 
@@ -387,9 +391,10 @@ plot2.3 <- ggplot()+
 
 plot2.3
 
-gta_plot_saver(plot=plot2.3,
-               path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
-               name=paste("Figure ",chapter.number,".3", sep=""))
+## commented out for replication
+# gta_plot_saver(plot=plot2.3,
+#                path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
+#                name=paste("Figure ",chapter.number,".3", sep=""))
 
 
 # Separat plot per request from simon, with trade values manually inserted from USTR
@@ -466,7 +471,8 @@ figure2.4.xlsx$USTR.shares <- (figure2.4.xlsx$trade.value/1000000000)/figure2.4.
 names(figure2.4.xlsx)=c("US administration","Cut-off date","Number of harmful interventions imposed by China and affecting USA",
                         "Value of 2016 US exorts to China on affected tariff lines", "Share of 2016 US exports to China on affected tariff lines","Total Chinese Imports from US","Share of total imports from US","USTR trade values","USTR related share of total imports")
 
-write.xlsx(figure2.4.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".4 - Data for Figure ",chapter.number,".4.xlsx", sep=""), row.names=F)
+## commented out for replication
+# write.xlsx(figure2.4.xlsx, file=paste("0 report production/GTA 23/tables & figures/",output.path,"/Figure ",chapter.number,".4 - Data for Figure ",chapter.number,".4.xlsx", sep=""), row.names=F)
 
 # plot here
 plot2.4 <- ggplot()+
@@ -486,9 +492,11 @@ plot2.4 <- ggplot()+
 
 plot2.4
 
-gta_plot_saver(plot=plot2.4,
-               path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
-               name=paste("Figure ",chapter.number,".4", sep=""))
+
+## commented out for replication
+# gta_plot_saver(plot=plot2.4,
+#                path=paste("0 report production/GTA 23/tables & figures/",output.path, sep=""),
+#                name=paste("Figure ",chapter.number,".4", sep=""))
 
 
 # Separat plot per request from simon, with trade values manually inserted from USTR
