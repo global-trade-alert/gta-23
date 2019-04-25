@@ -24,6 +24,9 @@ setwd("C:/Users/jfrit/Desktop/Dropbox/GTA cloud")
 # setwd("/Users/piotrlukaszuk/Dropbox/GTA 21")
 # setwd("/Users/patrickbuess/Dropbox/Collaborations/GTA cloud/")
 
+## For replication
+master.path="0 report production/GTA 23/0 GTA data used in final report/master_plus.Rdata"
+replica.path="0 report production/GTA 23/0 GTA data used in final report/database replica - parts - base.Rdata"
 
 #Settings
 chapter.number=3
@@ -82,7 +85,8 @@ for(yr in 2013:2018){
   for(i in 1:2){
     
     # (i) were tariffs or trade defence that only affected China,
-    gta_data_slicer(gta.evaluation = c("Red", "Amber"),
+    gta_data_slicer(data.path=master.path,
+                    gta.evaluation = c("Red", "Amber"),
                     affected.flows = "inward",
                     implementation.period = c(yr.start, yr.end),
                     implementing.country = as.character(f21$implementer[i]),
@@ -108,7 +112,8 @@ for(yr in 2013:2018){
     }
     
     # (ii) were other harmful US policies that only affected China,
-    gta_data_slicer(gta.evaluation = c("Red", "Amber"),
+    gta_data_slicer(data.path=master.path,
+                    gta.evaluation = c("Red", "Amber"),
                     affected.flows = "inward",
                     implementation.period = c(yr.start, yr.end),
                     implementing.country = as.character(f21$implementer[i]),
@@ -135,7 +140,8 @@ for(yr in 2013:2018){
     
     
     # (iii) were tariffs or trade defence that affected China and other US trading partners,
-    gta_data_slicer(gta.evaluation = c("Red", "Amber"),
+    gta_data_slicer(data.path=master.path,
+                    gta.evaluation = c("Red", "Amber"),
                     affected.flows = "inward",
                     implementation.period = c(yr.start, yr.end),
                     implementing.country = as.character(f21$implementer[i]),
@@ -160,7 +166,8 @@ for(yr in 2013:2018){
     }
     
     # (iv) were other US policies that affected China and other US trading partners.
-    gta_data_slicer(gta.evaluation = c("Red", "Amber"),
+    gta_data_slicer(data.path=master.path,
+                    gta.evaluation = c("Red", "Amber"),
                     affected.flows = "inward",
                     implementation.period = c(yr.start, yr.end),
                     implementing.country = as.character(f21$implementer[i]),
@@ -316,7 +323,8 @@ figure2.3=data.frame(administration=c("Obama II","Trump 1st year", "Trump 2nd ye
 
 for(i in 1:nrow(figure2.3)){
   # (i) were tariffs or trade defence that only affected China,
-  gta_data_slicer(gta.evaluation = c("Red", "Amber"),
+  gta_data_slicer(data.path=master.path,
+                  gta.evaluation = c("Red", "Amber"),
                   affected.flows = "inward",
                   implementation.period = c("2008-11-01", as.character(figure2.3$end.date[i])),
                   implementing.country = "United States of America",
@@ -415,7 +423,8 @@ figure2.4=data.frame(administration=c("Obama II","Trump 1st year", "Trump 2nd ye
 
 for(i in 1:nrow(figure2.4)){
   # (i) were tariffs or trade defence that only affected China,
-  gta_data_slicer(gta.evaluation = c("Red", "Amber"),
+  gta_data_slicer(data.path=master.path,
+                  gta.evaluation = c("Red", "Amber"),
                   affected.flows = "inward",
                   implementation.period = c("2008-11-01", as.character(figure2.4$end.date[i])),
                   implementing.country = "China",
